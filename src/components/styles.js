@@ -22,13 +22,18 @@ export default makeStyles({
     boxShadow: "0px 5px 15px 0px rgb(39 48 112 / 51%)",
   },
   rooftop: {
-    // background: `linear-gradient(190deg, rgb(169, 152, 172) 30%, rgb(167, 166, 163)30%), url(${rooftop})`,
+    background: `linear-gradient(190deg, rgb(169, 152, 172) 30%, rgb(167, 166, 163)30%), url(${roofimg})`,
+    // background:
+    //   `-moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(${https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a}) no-repeat`,
     // background: `linear-gradient( 90deg,rgb(169, 152, 172) 0%,rgb(167, 166, 163) 100%), url(${rooftop})`,
-    backgroundImage: `url(${roofimg})`,
+    // backgroundImage: 'linear-gradient(to bottom, black, white),
+    //   url(${roofim/g.jpg})';
+    // backgroundImage: `url(${roofimg})`,
 
     // backgroundRepeat: "no repeat",
     // colors={['rgba(0,0,0,0.2)', 'transparent']},
     // // colors={["white", "#ffffff00"]},
+    color: "white",
     height: "100vh",
     display: "flex",
     flexDirection: "column",

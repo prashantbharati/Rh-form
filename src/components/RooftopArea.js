@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import useStyles from "./styles";
+import { Typography } from "@material-ui/core";
 const App = (props) => {
   const classes = useStyles();
   const next = (e) => {
@@ -14,6 +15,7 @@ const App = (props) => {
   };
   return (
     <div className={classes.rooftop}>
+      <Typography variant="h2">Enter you rooftop Area</Typography>
       RooftopArea
       <Button color="primary" variant="contained" onClick={next}>
         Continue next
