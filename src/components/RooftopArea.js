@@ -15,14 +15,26 @@ const App = (props) => {
   };
   return (
     <div className={classes.rooftop}>
-      <Typography variant="h2">Enter you rooftop Area</Typography>
-      RooftopArea
-      <Button color="primary" variant="contained" onClick={next}>
-        Continue next
-      </Button>
-      <Button color="primary" variant="contained" onClick={back}>
-        Continue back
-      </Button>
+      <Typography variant="h2">Enter you Rooftop Area</Typography>
+
+      <div>
+        <Button
+          className={classes.button}
+          color="primary"
+          variant="contained"
+          onClick={next}
+        >
+          Continue next
+        </Button>
+        <Button
+          className={classes.button}
+          color="primary"
+          variant="contained"
+          onClick={back}
+        >
+          Continue back
+        </Button>
+      </div>
     </div>
   );
 };
