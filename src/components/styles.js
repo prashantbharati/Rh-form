@@ -10,12 +10,21 @@ export default makeStyles({
     color: "white",
     backgroundColor: "#9e9e9e",
   },
+
+  roofbutton: {
+    display: "flex",
+    flexDirection: "row",
+    gap: "30px",
+    // justifyContent: "space-between",
+  },
+
   button: {
+    display: "table-cell",
     backgroundColor: "#68CBC1",
     color: "white",
-    width: "100%",
+    // width: "100%",
     maxWidth: "200px",
-    display: "flex",
+    // display: "flex",
     fontWeight: "700",
     borderStyle: "none",
     borderRadius: "999px 999px 999px 999px",

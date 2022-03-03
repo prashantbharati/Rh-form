@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import { Button, TextField } from "@material-ui/core";
 import useStyles from "./styles";
 import { Typography } from "@material-ui/core";
 const App = (props) => {
@@ -16,11 +16,19 @@ const App = (props) => {
   return (
     <div className={classes.rooftop}>
       <Typography variant="h2">Enter you Rooftop Area</Typography>
-
-      <div>
+      <br />
+      <TextField
+        name="title"
+        variant="outlined"
+        label="Area (sq feet)"
+      ></TextField>
+      <br />
+      <br />
+      <div className={classes.roofbutton}>
         <Button className={classes.button} variant="contained" onClick={next}>
           Continue next
         </Button>
+
         <Button className={classes.button} variant="contained" onClick={back}>
           Continue back
         </Button>
