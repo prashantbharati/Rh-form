@@ -44,6 +44,9 @@ export default makeStyles({
     alignItems: "center",
   },
   waterharvested: {
-    backgroundImage: `url(${roofimg1})`,
+    backgroundImage: `url(${waterharvested})`,
+    height: "100vh",
+    backgroundSize: "cover",
+    overflow: "hidden",
   },
 });

@@ -7,7 +7,12 @@ const App = (props) => {
   const user = props.user,
     setuser = props.setuser;
   console.log(user);
-  return <div className={classes.waterharvested}></div>;
+  const lol = "hello";
+  return (
+    <div className={classes.waterharvested}>
+      <Typography variant="h1">{lol}</Typography>
+    </div>
+  );
 };
 
 export default App;
