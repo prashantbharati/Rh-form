@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
+import { Typography } from "@material-ui/core";
 import useStyles from "./styles";
 const App = (props) => {
   const classes = useStyles();
@@ -10,9 +11,13 @@ const App = (props) => {
 
   return (
     <div className={classes.page}>
-      See How much water you save
+      <Typography variant="h2">
+        {" "}
+        See How much water you save in a year
+      </Typography>
+      <br />
       <Button className={classes.button} variant="contained" onClick={next}>
-        Continue
+        Explore
       </Button>
     </div>
   );
