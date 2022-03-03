@@ -15,7 +15,9 @@ const App = (props) => {
   };
   return (
     <div className={classes.rooftop}>
-      <Typography variant="h2">Enter you Rooftop Area</Typography>
+      <Typography style={{ color: "grey" }} variant="h2">
+        Enter you Rooftop Area
+      </Typography>
       <br />
       <TextField
         name="title"

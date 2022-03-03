@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import roofimg from "./rooftop.jpg";
+import roofimg1 from "./rooftop1.jpeg";
 export default makeStyles({
   page: {
     height: "100vh",
@@ -32,6 +32,9 @@ export default makeStyles({
   },
   rooftop: {
     backgroundColor: "grey",
+    backgroundImage: `url(${roofimg1})`,
+    backgroundSize: "cover",
+    overflow: "hidden",
     // background:
     //   `-moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url(${https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a}) no-repeat`,
     // background: `linear-gradient( 90deg,rgb(169, 152, 172) 0%,rgb(167, 166, 163) 100%), url(${rooftop})`,
