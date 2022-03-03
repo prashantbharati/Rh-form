@@ -8,7 +8,9 @@ const App = (props) => {
     e.preventDefault();
     props.nextStep();
   };
-
+  const user = props.user,
+    setuser = props.setuser;
+  console.log(user, setuser);
   return (
     <div className={classes.page}>
       <Typography variant="h2">

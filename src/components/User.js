@@ -30,13 +30,22 @@ const User = () => {
 
   switch (step) {
     case 0:
-      return <Explore nextStep={nextStep} handleChange={handleChange} />;
+      return (
+        <Explore
+          user={user}
+          setuser={setuser}
+          nextStep={nextStep}
+          handleChange={handleChange}
+        />
+      );
     case 1:
       return (
         <RooftopArea
           nextStep={nextStep}
           prevStep={prevStep}
           handleChange={handleChange}
+          user={user}
+          setuser={setuser}
         />
       );
     case 2:
@@ -45,10 +54,12 @@ const User = () => {
           nextStep={nextStep}
           prevStep={prevStep}
           handleChange={handleChange}
+          user={user}
+          setuser={setuser}
         />
       );
     case 3:
-      return <Success />;
+      return <Success user={user} setuser={setuser} />;
 
     default:
       console.log("This is a multi-step form built with React.");

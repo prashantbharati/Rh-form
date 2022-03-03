@@ -13,6 +13,9 @@ const App = (props) => {
     e.preventDefault();
     props.prevStep();
   };
+  const user = props.user,
+    setuser = props.setuser;
+  console.log(user);
   return (
     <div className={classes.rooftop}>
       <Typography style={{ color: "grey" }} variant="h2">
@@ -23,7 +26,9 @@ const App = (props) => {
         name="title"
         variant="outlined"
         label="Area (sq feet)"
+        onChange={(e) => setuser({ ...user, area: e.target.value })}
       ></TextField>
+
       <br />
       <br />
       <div className={classes.roofbutton}>
