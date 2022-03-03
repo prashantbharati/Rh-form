@@ -10,8 +10,8 @@ const App = (props) => {
 
   return (
     <div className={classes.page}>
-      Explore
-      <Button color="primary" variant="contained" onClick={next}>
+      See How much water you save
+      <Button className={classes.button} variant="contained" onClick={next}>
         Continue
       </Button>
     </div>
