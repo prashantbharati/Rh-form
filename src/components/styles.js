@@ -24,7 +24,7 @@ export default makeStyles({
     backgroundColor: "#68CBC1",
     color: "white",
     // width: "100%",
-    maxWidth: "200px",
+    maxWidth: "250px",
     // display: "flex",
     fontWeight: "700",
     borderStyle: "none",
@@ -46,7 +46,11 @@ export default makeStyles({
   waterharvested: {
     backgroundImage: `url(${waterharvested})`,
     height: "100vh",
+    fontWeight: "700",
     backgroundSize: "cover",
     overflow: "hidden",
+    display: "flex",
+    textAlign: "center",
+    alignItems: "center",
   },
 });

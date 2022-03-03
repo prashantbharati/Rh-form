@@ -14,19 +14,22 @@ const App = (props) => {
     city = props.city;
 
   const result = () => {
-    let Area = user * 0.092;
+    let Area = user.area * 0.092;
     let rainfall = 100;
     const answer = rainfall * Area * 0.9 * 100;
     return answer;
   };
-
-  console.log(result);
+  let fanswer = Math.ceil(result());
+  console.log(fanswer);
 
   console.log(user);
-  const lol = "hello";
+
   return (
     <div className={classes.waterharvested}>
-      <Typography variant="h1">{lol}</Typography>
+      <Typography style={{ color: "white" }} variant="h1">
+        You saved around
+        {` ${fanswer}`} litres
+      </Typography>
     </div>
   );
 };
