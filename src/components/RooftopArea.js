@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
+import useStyles from "./styles";
 const App = (props) => {
+  const classes = useStyles();
   const next = (e) => {
     e.preventDefault();
     props.nextStep();
@@ -11,7 +13,7 @@ const App = (props) => {
     props.prevStep();
   };
   return (
-    <div>
+    <div className={classes.rooftop}>
       RooftopArea
       <Button color="primary" variant="contained" onClick={next}>
         Continue next
