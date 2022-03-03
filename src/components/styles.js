@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import rooftop from "./rooftop.jpg";
+import roofimg from "./rooftop.jpg";
 export default makeStyles({
   page: {
     height: "100vh",
@@ -24,7 +24,7 @@ export default makeStyles({
   rooftop: {
     // background: `linear-gradient(190deg, rgb(169, 152, 172) 30%, rgb(167, 166, 163)30%), url(${rooftop})`,
     // background: `linear-gradient( 90deg,rgb(169, 152, 172) 0%,rgb(167, 166, 163) 100%), url(${rooftop})`,
-    backgroundImage: `url(${rooftop}`,
+    backgroundImage: `url(${roofimg})`,
 
     // backgroundRepeat: "no repeat",
     // colors={['rgba(0,0,0,0.2)', 'transparent']},
