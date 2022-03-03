@@ -18,20 +18,10 @@ const App = (props) => {
       <Typography variant="h2">Enter you Rooftop Area</Typography>
 
       <div>
-        <Button
-          className={classes.button}
-          color="primary"
-          variant="contained"
-          onClick={next}
-        >
+        <Button className={classes.button} variant="contained" onClick={next}>
           Continue next
         </Button>
-        <Button
-          className={classes.button}
-          color="primary"
-          variant="contained"
-          onClick={back}
-        >
+        <Button className={classes.button} variant="contained" onClick={back}>
           Continue back
         </Button>
       </div>
