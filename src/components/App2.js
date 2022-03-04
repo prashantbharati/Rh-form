@@ -28,9 +28,9 @@ function Map() {
 
   return (
     <GoogleMap
-      defaultZoom={10}
+      defaultZoom={5}
       defaultCenter={{ lat: 31.104815, lng: 77.173401 }}
-      //   defaultOptions={{ styles: mapStyles }}
+      defaultOptions={{ styles: mapStyles }}
     >
       {cities.map((city) => (
         <Marker
@@ -39,9 +39,9 @@ function Map() {
             lat: city.geometry[0],
             lng: city.geometry[1],
           }}
-          //   onClick={() => {
-          //     setSelectedPark(park);
-          //   }}
+          onClick={() => {
+            setSelectedPark(city.Name);
+          }}
           //   icon={{
           //     url: `/skateboarding.svg`,
           //     scaledSize: new window.google.maps.Size(25, 25),
