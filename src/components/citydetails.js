@@ -130,3 +130,5 @@ const cities = [
     geometry: [8.524139, 76.936638],
   },
 ];
+
+export default cities;

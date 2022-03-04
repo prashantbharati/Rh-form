@@ -8,6 +8,7 @@ import {
 } from "react-google-maps";
 // import * as parkData from "./data/skateboard-parks.json";
 import mapStyles from "./mapStyles";
+import cities from "./citydetails";
 
 function Map() {
   const [selectedPark, setSelectedPark] = useState(null);
@@ -31,22 +32,22 @@ function Map() {
       defaultCenter={{ lat: 31.104815, lng: 77.173401 }}
       //   defaultOptions={{ styles: mapStyles }}
     >
-      {/* {parkData.features.map((park) => (
+      {cities.map((city) => (
         <Marker
-          key={park.properties.PARK_ID}
+          key={city.ID}
           position={{
-            lat: park.geometry.coordinates[1],
-            lng: park.geometry.coordinates[0],
+            lat: city.geometry.coordinates[0],
+            lng: city.geometry.coordinates[1],
           }}
-          onClick={() => {
-            setSelectedPark(park);
-          }}
+          //   onClick={() => {
+          //     setSelectedPark(park);
+          //   }}
           //   icon={{
           //     url: `/skateboarding.svg`,
           //     scaledSize: new window.google.maps.Size(25, 25),
           //   }}
         />
-      ))} */}
+      ))}
 
       {/* {selectedPark && (
         <InfoWindow
