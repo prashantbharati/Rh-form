@@ -10,9 +10,7 @@ import {
 import mapStyles from "./mapStyles";
 import cities from "./citydetails";
 
-function Map() {
-  const [selectedPark, setSelectedPark] = useState(null);
-
+function Map({ selectedPark, setSelectedPark }) {
   useEffect(() => {
     const listener = (e) => {
       if (e.key === "Escape") {
