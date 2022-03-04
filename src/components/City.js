@@ -15,7 +15,21 @@ const App = (props) => {
   return (
     <div>
       City
-      <App2 selectedPark={selectedPark} setSelectedPark={setSelectedPark} />
+      <div
+        style={{
+          display: "none",
+          position: "absolute",
+          // top: "15%",
+          // left: "15%",
+          width: "40%",
+          height: "70%",
+          padding: "16px",
+          // border: "16px solid orange"
+          alignItems: "center",
+        }}
+      >
+        <App2 selectedPark={selectedPark} setSelectedPark={setSelectedPark} />
+      </div>
       <Button color="primary" variant="contained" onClick={next}>
         Continue next
       </Button>
