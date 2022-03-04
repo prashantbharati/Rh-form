@@ -36,8 +36,8 @@ function Map() {
         <Marker
           key={city.ID}
           position={{
-            lat: city.geometry.coordinates[0],
-            lng: city.geometry.coordinates[1],
+            lat: city.geometry[0],
+            lng: city.geometry[1],
           }}
           //   onClick={() => {
           //     setSelectedPark(park);
