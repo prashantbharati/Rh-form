@@ -1,6 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 import { Typography } from "@material-ui/core";
+import cities from "./citydetails";
 const App = (props) => {
   const classes = useStyles();
 
@@ -10,13 +11,22 @@ const App = (props) => {
   // = Rainfall (mm) x Area of Rooftop x 0.9 *1000
 
   const user = props.user,
-    setuser = props.setuser,
-    city = props.city;
+    currcity = user.city;
+  // console.log( currcity);
+  console.log(user, currcity);
+
+  function check(city) {
+    return city.Name === currcity;
+  }
+
+  let rainfall = cities.filter(check);
 
   const result = () => {
     let Area = user.area * 0.092;
-    let rainfall = 100;
-    const answer = rainfall * Area * 0.9 * 100;
+    console.log(user.area, user.city);
+
+    console.log(rainfall[0].rain, "lol");
+    const answer = rainfall[0].rain * Area * 0.9 * 100;
     return answer;
   };
   let fanswer = Math.ceil(result());

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "@material-ui/core/Button";
 import App2 from "./App2";
 import Box from "@mui/material/Box";
@@ -25,7 +25,6 @@ const App = (props) => {
     props.prevStep();
   };
 
-  let f = 0;
   const handleclick = () => {
     document.querySelector("#map").style.display = "flex";
   };
@@ -54,7 +53,7 @@ const App = (props) => {
               onChange={handleChange}
             >
               {cities.map((city) => (
-                <MenuItem value={20}>{city.Name}</MenuItem>
+                <MenuItem value={city.Name}>{city.Name}</MenuItem>
               ))}
             </Select>
           </FormControl>
@@ -65,7 +64,7 @@ const App = (props) => {
           variant="contained"
           onClick={handleclick}
         >
-          Select From Map
+          See Your City
         </Button>
       </div>
 
