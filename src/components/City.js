@@ -13,6 +13,8 @@ import { Typography } from "@material-ui/core";
 const App = (props) => {
   const classes = useStyles();
   const [selectedPark, setSelectedPark] = useState(null);
+  const user = props.user,
+    setuser = props.setuser;
   const next = (e) => {
     e.preventDefault();
     props.nextStep();
@@ -28,6 +30,11 @@ const App = (props) => {
     document.querySelector("#map").style.display = "flex";
   };
 
+  const handleChange = (e) => {
+    setuser({ ...user, city: e.target.value });
+  };
+
+  console.log(user);
   return (
     <div className={classes.rooftop}>
       <Typography style={{ color: "grey" }} variant="h2">
@@ -43,7 +50,7 @@ const App = (props) => {
               id="demo-simple-select"
               // value={age}
               label="Age"
-              // onChange={handleChange}
+              onChange={handleChange}
             >
               {cities.map((city) => (
                 <MenuItem value={20}>{city.Name}</MenuItem>
@@ -73,6 +80,9 @@ const App = (props) => {
       >
         <App2 selectedPark={selectedPark} setSelectedPark={setSelectedPark} />
       </div>
+      <br />
+      <br />
+      <br />
       <div className={classes.roofbutton}>
         <Button className={classes.button} variant="contained" onClick={next}>
           Continue next
