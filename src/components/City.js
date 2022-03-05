@@ -22,29 +22,47 @@ const App = (props) => {
     e.preventDefault();
     props.prevStep();
   };
+
+  let f = 0;
+  const handleclick = () => {
+    document.querySelector("#map").style.display = "absolute";
+  };
+
   return (
     <div className={classes.rooftop}>
       <Typography style={{ color: "grey" }} variant="h2">
         Select Your City
       </Typography>
-      <Box sx={{ minWidth: 120 }}>
-        <FormControl sx={{ m: 1, minWidth: 80 }}>
-          <InputLabel id="demo-simple-select-label">City</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            // value={age}
-            label="Age"
-            // onChange={handleChange}
-          >
-            {cities.map((city) => (
-              <MenuItem value={20}>{city.Name}</MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </Box>
+
+      <div className={classes.roofbutton}>
+        <Box sx={{ minWidth: 120 }}>
+          <FormControl sx={{ m: 1, minWidth: 80 }}>
+            <InputLabel id="demo-simple-select-label">City</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              // value={age}
+              label="Age"
+              // onChange={handleChange}
+            >
+              {cities.map((city) => (
+                <MenuItem value={20}>{city.Name}</MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Box>
+
+        <Button
+          className={classes.button}
+          variant="contained"
+          onClick={handleclick}
+        >
+          Select From Map
+        </Button>
+      </div>
 
       <div
+        id="map"
         style={{
           display: "none",
           position: "absolute",
