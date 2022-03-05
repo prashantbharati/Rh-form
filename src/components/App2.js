@@ -49,6 +49,7 @@ function Map() {
       ))}
       {selectedPark && (
         <InfoWindow
+          style={{ backgroundColor: "black" }}
           onCloseClick={() => {
             setSelectedPark(null);
           }}
@@ -61,9 +62,30 @@ function Map() {
             <h2>{selectedPark.NAME}</h2>
             <p>{selectedPark.DESCRIPTIO}</p>
           </div> */}
-          <div style={{ color: "black" }}>
+          <div style={{ backgroundColor: "#9e9e9e", color: "black" }}>
             <Typography variant="h1">{selectedPark.Name}</Typography>
-            Park deatils
+
+            <div
+              style={{
+                display: "flexbox",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Typography variant="h2" style={{ fontWeight: "bold" }}>
+                Av. Annual Rainfall (mm)
+              </Typography>
+              <Typography variant="h3">{selectedPark.rain}</Typography>
+            </div>
+
+            <div
+              style={{ display: "flexbox", flexDirection: "row", gap: "30px" }}
+            >
+              <Typography variant="h2" style={{ fontWeight: "bold" }}>
+                Rainy days
+              </Typography>
+              <Typography variant="h3">{selectedPark.days}</Typography>
+            </div>
           </div>
         </InfoWindow>
       )}

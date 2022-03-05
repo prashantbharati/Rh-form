@@ -12,7 +12,7 @@ import { Typography } from "@material-ui/core";
 
 const App = (props) => {
   const classes = useStyles();
-  const [selectedPark, setSelectedPark] = useState(null);
+
   const user = props.user,
     setuser = props.setuser;
   const next = (e) => {
