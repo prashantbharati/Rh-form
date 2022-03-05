@@ -22,7 +22,7 @@ const App = (props) => {
   return (
     <div>
       <Box sx={{ minWidth: 120 }}>
-        <FormControl fullWidth>
+        <FormControl sx={{ m: 1, minWidth: 80 }}>
           <InputLabel id="demo-simple-select-label">Age</InputLabel>
           <Select
             labelId="demo-simple-select-label"
