@@ -25,7 +25,7 @@ const App = (props) => {
 
   let f = 0;
   const handleclick = () => {
-    document.querySelector("#map").style.display = "absolute";
+    document.querySelector("#map").style.display = "flex";
   };
 
   return (
@@ -65,14 +65,10 @@ const App = (props) => {
         id="map"
         style={{
           display: "none",
-          position: "absolute",
-          // top: "15%",
-          // left: "15%",
-          width: "40%",
-          height: "70%",
-          padding: "16px",
-          // border: "16px solid orange"
           alignItems: "center",
+          justifyContent: "center",
+          width: "500px",
+          zIndex: "1000",
         }}
       >
         <App2 selectedPark={selectedPark} setSelectedPark={setSelectedPark} />
