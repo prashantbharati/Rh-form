@@ -7,8 +7,11 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import cities from "./citydetails";
+import useStyles from "./styles";
+import { Typography } from "@material-ui/core";
 
 const App = (props) => {
+  const classes = useStyles();
   const [selectedPark, setSelectedPark] = useState(null);
   const next = (e) => {
     e.preventDefault();
@@ -20,10 +23,13 @@ const App = (props) => {
     props.prevStep();
   };
   return (
-    <div>
+    <div className={classes.rooftop}>
+      <Typography style={{ color: "grey" }} variant="h2">
+        Select Your City
+      </Typography>
       <Box sx={{ minWidth: 120 }}>
         <FormControl sx={{ m: 1, minWidth: 80 }}>
-          <InputLabel id="demo-simple-select-label">Age</InputLabel>
+          <InputLabel id="demo-simple-select-label">City</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
@@ -37,7 +43,7 @@ const App = (props) => {
           </Select>
         </FormControl>
       </Box>
-      City
+
       <div
         style={{
           display: "none",
@@ -53,12 +59,15 @@ const App = (props) => {
       >
         <App2 selectedPark={selectedPark} setSelectedPark={setSelectedPark} />
       </div>
-      <Button color="primary" variant="contained" onClick={next}>
-        Continue next
-      </Button>
-      <Button color="primary" variant="contained" onClick={back}>
-        Continue back
-      </Button>
+      <div className={classes.roofbutton}>
+        <Button className={classes.button} variant="contained" onClick={next}>
+          Continue next
+        </Button>
+
+        <Button className={classes.button} variant="contained" onClick={back}>
+          Continue back
+        </Button>
+      </div>
     </div>
   );
 };
