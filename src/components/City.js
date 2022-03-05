@@ -31,6 +31,7 @@ const App = (props) => {
   };
 
   const handleChange = (e) => {
+    console.log(e.target);
     setuser({ ...user, city: e.target.value });
   };
 
@@ -78,7 +79,7 @@ const App = (props) => {
           zIndex: "1000",
         }}
       >
-        <App2 selectedPark={selectedPark} setSelectedPark={setSelectedPark} />
+        <App2 user={user} setuser={setuser} />
       </div>
       <br />
       <br />

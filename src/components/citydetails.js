@@ -107,7 +107,7 @@ const cities = [
   {
     ID: 22,
     Name: "Chennai",
-    geometry: [31.104815, 77.173401],
+    geometry: [13.08268, 80.270721],
   },
   {
     ID: 23,

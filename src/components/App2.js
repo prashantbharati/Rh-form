@@ -9,8 +9,10 @@ import {
 // import * as parkData from "./data/skateboard-parks.json";
 import mapStyles from "./mapStyles";
 import cities from "./citydetails";
-
-function Map({ selectedPark, setSelectedPark }) {
+import { Typography } from "@material-ui/core";
+// let value;
+function Map() {
+  const [selectedPark, setSelectedPark] = useState(null);
   useEffect(() => {
     const listener = (e) => {
       if (e.key === "Escape") {
@@ -18,7 +20,7 @@ function Map({ selectedPark, setSelectedPark }) {
       }
     };
     window.addEventListener("keydown", listener);
-
+    // console.log(selectedPark);
     return () => {
       window.removeEventListener("keydown", listener);
     };
@@ -38,38 +40,48 @@ function Map({ selectedPark, setSelectedPark }) {
             lng: city.geometry[1],
           }}
           onClick={() => {
-            setSelectedPark(city.Name);
+            setSelectedPark(city);
+            // value = selectedPark;
+            // value=city
+            console.log(selectedPark);
           }}
-          //   icon={{
-          //     url: `/skateboarding.svg`,
-          //     scaledSize: new window.google.maps.Size(25, 25),
-          //   }}
         />
       ))}
-
-      {/* {selectedPark && (
+      {selectedPark && (
         <InfoWindow
           onCloseClick={() => {
             setSelectedPark(null);
           }}
           position={{
-            lat: selectedPark.geometry.coordinates[1],
-            lng: selectedPark.geometry.coordinates[0],
+            lat: selectedPark.geometry[0],
+            lng: selectedPark.geometry[1],
           }}
         >
-          <div>
-            <h2>{selectedPark.properties.NAME}</h2>
-            <p>{selectedPark.properties.DESCRIPTIO}</p>
+          {/* <div>
+            <h2>{selectedPark.NAME}</h2>
+            <p>{selectedPark.DESCRIPTIO}</p>
+          </div> */}
+          <div style={{ color: "black" }}>
+            <Typography variant="h1">{selectedPark.Name}</Typography>
+            Park deatils
           </div>
         </InfoWindow>
-      )} */}
+      )}
     </GoogleMap>
   );
 }
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 
-export default function App() {
+const App = ({ user, setuser }) => {
+  // setuser({ ...user, : e.target.value })
+  // const [newstate, setnewstate] = useState({
+  //   ID: 0,
+  //   Name: "",
+  //   geometry: [],
+  // });
+  // // setnewstate(value);
+  // console.log(newstate);
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <MapWrapped
@@ -81,4 +93,6 @@ export default function App() {
       />
     </div>
   );
-}
+};
+
+export default App;
