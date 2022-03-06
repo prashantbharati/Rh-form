@@ -9,7 +9,7 @@ import Select from "@mui/material/Select";
 import cities from "./citydetails";
 import useStyles from "./styles";
 import { Typography } from "@material-ui/core";
-
+import Indiamap from "./Indiamap";
 const App = (props) => {
   const classes = useStyles();
 
@@ -59,6 +59,7 @@ const App = (props) => {
           </FormControl>
         </Box>
 
+        <Indiamap />
         <Button
           className={classes.button}
           variant="contained"
