@@ -83,7 +83,7 @@ const App = (props) => {
             </Container>
           </div>
         </Grid>
-        <Grid item className={classes.fonts} md={6}>
+        <Grid item md={6}>
           <div>
             <div
             // id="map"

@@ -18,44 +18,45 @@ const App = (props) => {
   console.log(user);
   return (
     <div className={classes.roof}>
-      <Grid container small={6}>
-        <div className={classes.rooftop}>
-          <Container>
-            <Typography style={{ color: "white" }} variant="h2">
-              Enter Rooftop Area
-            </Typography>
-            <br />
-            <TextField
-              name="title"
-              variant="outlined"
-              label="Area (sq feet)"
-              onChange={(e) => setuser({ ...user, area: e.target.value })}
-            ></TextField>
-            <br />
-            <br />
-            <div className={classes.roofbutton}>
-              <Button
-                className={classes.button}
-                variant="contained"
-                onClick={next}
-              >
-                Continue next
-              </Button>
+      <Grid container spacing={12}>
+        <Grid item md={6} lg={4}>
+          <div className={classes.rooftop}>
+            <Container>
+              <Typography style={{ color: "white" }} variant="h2">
+                Enter Rooftop Area
+              </Typography>
+              <br />
+              <TextField
+                name="title"
+                variant="outlined"
+                label="Area (sq feet)"
+                onChange={(e) => setuser({ ...user, area: e.target.value })}
+              ></TextField>
+              <br />
+              <br />
+              <div className={classes.roofbutton}>
+                <Button
+                  className={classes.button}
+                  variant="contained"
+                  onClick={next}
+                >
+                  Continue next
+                </Button>
 
-              <Button
-                className={classes.button}
-                variant="contained"
-                onClick={back}
-              >
-                Continue back
-              </Button>
-            </div>
-          </Container>
-        </div>
-      </Grid>
-
-      <Grid item small={6}>
-        <div className={classes.roofleft}></div>
+                <Button
+                  className={classes.button}
+                  variant="contained"
+                  onClick={back}
+                >
+                  Continue back
+                </Button>
+              </div>
+            </Container>
+          </div>
+        </Grid>
+        <Grid item md={6} lg={8}>
+          <div className={classes.roofleft}></div>
+        </Grid>
       </Grid>
     </div>
   );
