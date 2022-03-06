@@ -59,7 +59,6 @@ const App = (props) => {
           </FormControl>
         </Box>
 
-        <Indiamap />
         <Button
           className={classes.button}
           variant="contained"

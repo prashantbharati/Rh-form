@@ -44,6 +44,10 @@ export default makeStyles({
     justifyContent: "center",
     alignItems: "center",
   },
+  roof: {
+    display: "flex",
+    flexDirection: "row",
+  },
   waterharvested: {
     backgroundImage: `url(${waterharvested})`,
     height: "100vh",
