@@ -21,7 +21,7 @@ const App = (props) => {
       <div className={classes.rooftop}>
         <Container>
           <Typography style={{ color: "white" }} variant="h2">
-            Enter your Rooftop Area
+            Enter Rooftop Area
           </Typography>
           <br />
           <TextField

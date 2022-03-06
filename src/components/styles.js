@@ -46,6 +46,7 @@ export default makeStyles({
   },
   roof: {
     display: "flex",
+    flex: "1 1 0",
     flexDirection: "row",
   },
   roofleft: {

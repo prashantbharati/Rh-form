@@ -127,7 +127,7 @@ const MapWrapped = withScriptjs(
               lng: city.geometry[1],
             }}
             onClick={() => {
-              // setSelectedPark(city);
+              setSelectedPark(city);
               setuser({ ...user, city: city.Name });
               console.log(user);
               // console.log(user, setuser, "lololololololol");
