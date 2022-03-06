@@ -35,8 +35,8 @@ const App = (props) => {
   console.log(user);
 
   return (
-    <div className={classes.waterharvested}>
-      <Typography style={{ color: "grey" }} variant="h1">
+    <div className={classes.page}>
+      <Typography style={{ color: "white" }} variant="h2">
         You saved around
         {` ${fanswer}`} litres
       </Typography>
