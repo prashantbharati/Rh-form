@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import roofimg1 from "./rooftop1.jpeg";
 import waterharvested from "./waterharvested.jpeg";
-import Indiamap from "./India map.png";
+import houseimg from "./houseimg.png";
 export default makeStyles({
   page: {
     height: "100vh",
@@ -34,7 +34,7 @@ export default makeStyles({
   },
   rooftop: {
     backgroundColor: "grey",
-    backgroundImage: `url(${roofimg1})`,
+    // backgroundImage: `url(${roofimg1})`,
     backgroundSize: "cover",
     overflow: "hidden",
     color: "white",
@@ -48,6 +48,14 @@ export default makeStyles({
     display: "flex",
     flexDirection: "row",
   },
+  roofleft: {
+    backgroundImage: `url(${houseimg})`,
+    backgroundColor: "grey",
+    height: "100vh",
+    width: "100%",
+    backgroundSize: "cover",
+    overflow: "hidden",
+  },
   waterharvested: {
     backgroundImage: `url(${waterharvested})`,
     height: "100vh",
@@ -57,13 +65,5 @@ export default makeStyles({
     display: "flex",
     textAlign: "center",
     alignItems: "center",
-  },
-
-  india: {
-    backgroundImage: `url(${Indiamap})`,
-    // height: "100vh",
-    // fontWeight: "700",
-    // backgroundSize: "cover",
-    // overflow: "hidden",
   },
 });
