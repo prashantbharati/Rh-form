@@ -25,10 +25,6 @@ const App = (props) => {
     props.prevStep();
   };
 
-  const handleclick = () => {
-    document.querySelector("#map").style.display = "flex";
-  };
-
   const handleChange = (e) => {
     console.log(e.target);
     setuser({ ...user, city: e.target.value });
