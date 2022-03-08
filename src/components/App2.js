@@ -116,7 +116,7 @@ const MapWrapped = withScriptjs(
     return (
       <GoogleMap
         defaultZoom={5}
-        defaultCenter={{ lat: 31.104815, lng: 77.173401 }}
+        defaultCenter={{ lat: 19.73744, lng: 96.195511 }}
         defaultOptions={{ styles: mapStyles }}
       >
         {cities.map((city) => (
