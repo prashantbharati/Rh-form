@@ -26,7 +26,7 @@ const App = (props) => {
     console.log(user.area, user.city);
 
     console.log(rainfall[0].rain, "lol");
-    const answer = rainfall[0].rain * Area * 0.9 * 100;
+    const answer = (rainfall[0].rain * Area) / 1000000;
     return answer;
   };
   let fanswer = Math.ceil(result());
