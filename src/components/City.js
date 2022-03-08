@@ -19,6 +19,7 @@ const App = (props) => {
     e.preventDefault();
     props.nextStep();
   };
+  let maxWidth = window.innerWidth;
 
   const back = (e) => {
     e.preventDefault();
@@ -83,24 +84,33 @@ const App = (props) => {
             </Container>
           </div>
         </Grid>
-        <Grid item md={6}>
-          <div>
-            <div
-            // id="map"
-            // style={{
-            //   display: "flex",
-            //   alignItems: "center",
-            //   justifyContent: "center",
-            //   height: "100vh",
-            //   // width: "50%",
-            //   width: "1000px",
-            //   // zIndex: "1000",
-            // }}
-            >
-              <App2 user={user} setuser={setuser} />
+        {maxWidth > 500 ? (
+          <Grid item md={6}>
+            <div>
+              <div>
+                <App2 user={user} setuser={setuser} />
+              </div>
             </div>
-          </div>
-        </Grid>
+          </Grid>
+        ) : (
+          <Button
+            className={classes.button}
+            variant="contained"
+            // onClick={next}
+          >
+            Select from the Map
+          </Button>
+        )}
+
+        {/* {maxWidth < 768 && (
+          <Button
+            className={classes.button}
+            variant="contained"
+            // onClick={next}
+          >
+            Select from the Map
+          </Button>
+        )} */}
       </Grid>
     </div>
   );
