@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core/styles";
-import roofimg1 from "./rooftop1.jpeg";
 import waterharvested from "./waterharvested.jpeg";
 import houseimg from "./houseimg.png";
 export default makeStyles({
@@ -57,6 +56,18 @@ export default makeStyles({
     // width: "50%",
     backgroundSize: "cover",
     overflow: "hidden",
+  },
+  map: {
+    display: "block",
+    "@media (max-width: 1030px)": {
+      display: "none",
+    },
+  },
+  mapbutton: {
+    display: "none",
+    "@media (max-width: 1030px)": {
+      display: "block",
+    },
   },
   waterharvested: {
     backgroundImage: `url(${waterharvested})`,

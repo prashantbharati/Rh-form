@@ -84,23 +84,21 @@ const App = (props) => {
             </Container>
           </div>
         </Grid>
-        {maxWidth > 500 ? (
-          <Grid item md={6}>
-            <div>
-              <div>
-                <App2 user={user} setuser={setuser} />
-              </div>
-            </div>
-          </Grid>
-        ) : (
+        {/* className={`${classes.root} ${classes.form}`} */}
+
+        <Grid item md={6}>
+          <div className={classes.map}>
+            <App2 user={user} setuser={setuser} />
+          </div>
+
           <Button
-            className={classes.button}
+            className={`${classes.button} ${classes.mapbutton}`}
             variant="contained"
             // onClick={next}
           >
             Select from the Map
           </Button>
-        )}
+        </Grid>
 
         {/* {maxWidth < 768 && (
           <Button
