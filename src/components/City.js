@@ -19,7 +19,6 @@ const App = (props) => {
     e.preventDefault();
     props.nextStep();
   };
-  let maxWidth = window.innerWidth;
 
   const back = (e) => {
     e.preventDefault();
@@ -114,14 +113,6 @@ const App = (props) => {
           <div className={classes.map}>
             <App2 user={user} setuser={setuser} />
           </div>
-
-          <Button
-            className={`${classes.button} ${classes.mapbutton}`}
-            variant="contained"
-            // onClick={next}
-          >
-            Select from the Map
-          </Button>
         </Grid>
 
         {/* {maxWidth < 768 && (
