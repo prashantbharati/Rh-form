@@ -52,6 +52,10 @@ export default makeStyles({
     backgroundImage: `url(${houseimg})`,
     backgroundColor: "grey",
     height: "100vh",
+    "@media (max-width: 600px)": {
+      height: "40vh",
+    },
+
     // maxWidth: "70%",
     // width: "50%",
     backgroundSize: "cover",
