@@ -28,6 +28,9 @@ const App = (props) => {
   const handleclick = () => {
     document.querySelector("#map").style.display = "flex";
   };
+  const handleclick2 = () => {
+    document.querySelector("#map").style.display = "none";
+  };
   const handleChange = (e) => {
     console.log(e.target);
     setuser({ ...user, city: e.target.value });
@@ -86,6 +89,7 @@ const App = (props) => {
                   setuser={setuser}
                   lat={17.385044}
                   lng={78.486671}
+                  handleclick={handleclick2}
                 />
               </div>
 
@@ -121,6 +125,7 @@ const App = (props) => {
               setuser={setuser}
               lat={19.73744}
               lng={96.195511}
+              handleclick={handleclick2}
             />
           </div>
         </Grid>

@@ -45,6 +45,7 @@ const MapWrapped = withScriptjs(
             }}
             onClick={() => {
               setSelectedPark(city);
+              props.handleclick();
               setuser({ ...user, city: city.Name });
               console.log(user);
               // console.log(user, setuser, "lololololololol");
@@ -52,7 +53,7 @@ const MapWrapped = withScriptjs(
             }}
           />
         ))}
-        {selectedPark && (
+        {/* {selectedPark && (
           <InfoWindow
             style={{ backgroundColor: "black" }}
             onCloseClick={() => {
@@ -93,19 +94,20 @@ const MapWrapped = withScriptjs(
               </div>
             </div>
           </InfoWindow>
-        )}
+        )} */}
       </GoogleMap>
     );
   })
 );
 
-const App = ({ user, setuser, lat, lng }) => {
+const App = ({ user, setuser, lat, lng, handleclick }) => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <MapWrapped
         user={user}
         lat={lat}
         lng={lng}
+        handleclick={handleclick}
         setuser={setuser}
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD1evnI9XmPL4W05NUdZZe92af90-Esdd0`}
         loadingElement={<div style={{ height: `100%` }} />}
