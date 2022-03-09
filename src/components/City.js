@@ -81,7 +81,12 @@ const App = (props) => {
                   zIndex: "1000",
                 }}
               >
-                <App2 user={user} setuser={setuser} />
+                <App2
+                  user={user}
+                  setuser={setuser}
+                  lat={17.385044}
+                  lng={78.486671}
+                />
               </div>
 
               <br />
@@ -111,7 +116,12 @@ const App = (props) => {
 
         <Grid item md={6}>
           <div className={classes.map}>
-            <App2 user={user} setuser={setuser} />
+            <App2
+              user={user}
+              setuser={setuser}
+              lat={19.73744}
+              lng={96.195511}
+            />
           </div>
         </Grid>
 

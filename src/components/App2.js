@@ -33,7 +33,7 @@ const MapWrapped = withScriptjs(
     return (
       <GoogleMap
         defaultZoom={5}
-        defaultCenter={{ lat: 19.73744, lng: 96.195511 }}
+        defaultCenter={{ lat: props.lat, lng: props.lng }}
         defaultOptions={{ styles: mapStyles }}
       >
         {cities.map((city) => (
@@ -99,11 +99,13 @@ const MapWrapped = withScriptjs(
   })
 );
 
-const App = ({ user, setuser }) => {
+const App = ({ user, setuser, lat, lng }) => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <MapWrapped
         user={user}
+        lat={lat}
+        lng={lng}
         setuser={setuser}
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD1evnI9XmPL4W05NUdZZe92af90-Esdd0`}
         loadingElement={<div style={{ height: `100%` }} />}
