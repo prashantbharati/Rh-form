@@ -54,7 +54,7 @@ const App = (props) => {
             </Container>
           </div>
         </Grid>
-        <Grid item md={6} lg={8}>
+        <Grid item md={6} lg={8} sm={12}>
           <div className={classes.roofleft}></div>
         </Grid>
       </Grid>

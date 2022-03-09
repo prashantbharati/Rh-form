@@ -26,6 +26,9 @@ const App = (props) => {
     props.prevStep();
   };
 
+  const handleclick = () => {
+    document.querySelector("#map").style.display = "flex";
+  };
   const handleChange = (e) => {
     console.log(e.target);
     setuser({ ...user, city: e.target.value });
@@ -59,6 +62,27 @@ const App = (props) => {
                     </Select>
                   </FormControl>
                 </Box>
+
+                <Button
+                  className={`${classes.button} ${classes.mapbutton}`}
+                  variant="contained"
+                  onClick={handleclick}
+                >
+                  Select From Map
+                </Button>
+              </div>
+
+              <div
+                id="map"
+                style={{
+                  display: "none",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "500px",
+                  zIndex: "1000",
+                }}
+              >
+                <App2 user={user} setuser={setuser} />
               </div>
 
               <br />
