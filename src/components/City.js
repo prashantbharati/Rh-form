@@ -40,7 +40,7 @@ const App = (props) => {
   return (
     <div className={classes.roof}>
       <Grid container spacing={12}>
-        <Grid item spacing={6}>
+        <Grid item lg={6}>
           <div className={classes.rooftop}>
             <Container>
               <Typography style={{ color: "white" }} variant="h2">
@@ -118,7 +118,7 @@ const App = (props) => {
         </Grid>
         {/* className={`${classes.root} ${classes.form}`} */}
 
-        <Grid item md={6}>
+        <Grid item lg={6}>
           <div className={classes.map}>
             <App2
               user={user}
