@@ -13,10 +13,18 @@ const App = (props) => {
   console.log(user, setuser);
   return (
     <div className={classes.page}>
-      <Typography variant="h2">
-        {" "}
-        See How much water you save in a year
-      </Typography>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h2">
+          {" "}
+          See How much water you save in a year
+        </Typography>
+      </div>
       <br />
       <Button className={classes.button} variant="contained" onClick={next}>
         Explore

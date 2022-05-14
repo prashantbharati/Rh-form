@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button, TextField } from "@material-ui/core";
 import useStyles from "./styles";
-import { Typography, Container, Grid } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 const App = (props) => {
   const classes = useStyles();
   const next = (e) => {
@@ -16,6 +16,17 @@ const App = (props) => {
   const user = props.user,
     setuser = props.setuser;
   console.log(user);
+
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 450px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 450px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
+
   return (
     <div className={classes.roof}>
       <Grid container spacing={12}>
@@ -33,7 +44,13 @@ const App = (props) => {
             ></TextField>
             <br />
             <br />
-            <div className={classes.roofbutton}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: `${matches ? "column" : "row"}`,
+                gap: "30px",
+              }}
+            >
               <Button
                 className={classes.button}
                 variant="contained"
