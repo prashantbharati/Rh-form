@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import waterharvested from "./waterharvested.jpeg";
 import houseimg from "./houseimg.png";
+import roofimg1 from "./roofnew.png";
 export default makeStyles({
   page: {
     height: "100vh",
@@ -9,7 +10,7 @@ export default makeStyles({
     justifyContent: "center",
     alignItems: "center",
     color: "white",
-    backgroundColor: "#9e9e9e",
+    background: "linear-gradient(to right,#d2ccc4,#2f4353);",
   },
 
   roofbutton: {
@@ -21,27 +22,31 @@ export default makeStyles({
 
   button: {
     display: "table-cell",
-    backgroundColor: "#68CBC1",
+    backgroundColor: "#68cbc1",
     color: "white",
-    // width: "100%",
-    maxWidth: "250px",
-    // display: "flex",
+    /* // width: "100%", */
+    width: "200px",
+    /* // display: "flex", */
     fontWeight: "700",
+    fontSize: "20px",
     borderStyle: "none",
+    padding: "0.5em",
     borderRadius: "999px 999px 999px 999px",
     boxShadow: "0px 5px 15px 0px rgb(39 48 112 / 51%)",
   },
   rooftop: {
     backgroundColor: "grey",
-    // backgroundImage: `url(${roofimg1})`,
+    backgroundImage: `url(${roofimg1})`,
     backgroundSize: "cover",
     overflow: "hidden",
     color: "white",
     height: "100vh",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
   },
   roof: {
     display: "flex",
