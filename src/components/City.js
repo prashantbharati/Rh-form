@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "@material-ui/core/Button";
 import App2 from "./App2";
 import Box from "@mui/material/Box";
@@ -36,84 +36,115 @@ const App = (props) => {
     setuser({ ...user, city: e.target.value });
   };
 
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 450px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 450px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
+
   console.log(user);
   return (
     <div className={classes.roof}>
       <Grid container spacing={12}>
-        <Grid item lg={6}>
-          <div className={classes.rooftop}>
-            <Container>
-              <Typography style={{ color: "white" }} variant="h2">
-                Select Your City
-              </Typography>
+        <Grid item xs={12} md={6} lg={6} style={{}}>
+          <div
+            style={{
+              background: "linear-gradient(to down,#d2ccc4,#2f4353);",
 
-              <div className={classes.roofbutton}>
-                <Box sx={{ minWidth: 120 }}>
-                  <FormControl sx={{ m: 1, minWidth: 80 }}>
-                    <InputLabel id="demo-simple-select-label">City</InputLabel>
-                    <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value={user.city}
-                      label="Age"
-                      onChange={handleChange}
-                    >
-                      {cities.map((city) => (
-                        <MenuItem value={city.Name}>{city.Name}</MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                </Box>
+              color: "white",
+              height: "100vh",
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+            className={classes.page}
+          >
+            <Typography style={{ color: "white" }} variant="h2">
+              Select Your City
+            </Typography>
+            <br />
+            <br />
+            <div className={classes.roofbutton}>
+              <Box sx={{ minWidth: 120 }}>
+                <FormControl sx={{ m: 1, minWidth: 80 }}>
+                  <InputLabel id="demo-simple-select-label">City</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={user.city}
+                    label="Age"
+                    onChange={handleChange}
+                  >
+                    {cities.map((city) => (
+                      <MenuItem value={city.Name}>{city.Name}</MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Box>
 
-                <Button
-                  className={`${classes.button} ${classes.mapbutton}`}
-                  variant="contained"
-                  onClick={handleclick}
-                >
-                  Select From Map
-                </Button>
-              </div>
-
-              <div
-                id="map"
-                style={{
-                  display: "none",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "500px",
-                  zIndex: "1000",
-                }}
+              <Button
+                className={`${classes.button} ${classes.mapbutton}`}
+                variant="contained"
+                onClick={handleclick}
               >
-                <App2
-                  user={user}
-                  setuser={setuser}
-                  lat={17.385044}
-                  lng={78.486671}
-                  handleclick={handleclick2}
-                />
-              </div>
+                Select From Map
+              </Button>
+            </div>
 
-              <br />
-              <br />
-              <br />
-              <div className={classes.roofbutton}>
-                <Button
-                  className={classes.button}
-                  variant="contained"
-                  onClick={next}
-                >
-                  Continue next
-                </Button>
+            <div
+              id="map"
+              style={{
+                display: "none",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "500px",
+                zIndex: "1000",
+              }}
+            >
+              <App2
+                user={user}
+                setuser={setuser}
+                lat={17.385044}
+                lng={78.486671}
+                handleclick={handleclick2}
+              />
+            </div>
 
-                <Button
-                  className={classes.button}
-                  variant="contained"
-                  onClick={back}
-                >
-                  Continue back
-                </Button>
-              </div>
-            </Container>
+            <br />
+            <br />
+            <br />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: `${matches ? "column" : "row"}`,
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "30px",
+              }}
+            >
+              <Button
+                className={classes.button}
+                variant="contained"
+                onClick={next}
+              >
+                Continue next
+              </Button>
+
+              <Button
+                className={classes.button}
+                variant="contained"
+                onClick={back}
+              >
+                Continue back
+              </Button>
+            </div>
           </div>
         </Grid>
         {/* className={`${classes.root} ${classes.form}`} */}
