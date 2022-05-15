@@ -40,6 +40,7 @@ const App = (props) => {
               name="title"
               variant="outlined"
               label="Area (sq feet)"
+              style={{ border: "3px solid black" }}
               onChange={(e) => setuser({ ...user, area: e.target.value })}
             ></TextField>
             <br />

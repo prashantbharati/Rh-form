@@ -134,7 +134,7 @@ const App = (props) => {
                 variant="contained"
                 onClick={next}
               >
-                Continue next
+                next
               </Button>
 
               <Button
@@ -142,7 +142,7 @@ const App = (props) => {
                 variant="contained"
                 onClick={back}
               >
-                Continue back
+                back
               </Button>
             </div>
           </div>

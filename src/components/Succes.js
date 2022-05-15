@@ -2,6 +2,7 @@ import React from "react";
 import useStyles from "./styles";
 import { Typography } from "@material-ui/core";
 import cities from "./citydetails";
+import lastnew1 from "./lastnew1.jpg";
 const App = (props) => {
   const classes = useStyles();
 
@@ -34,11 +35,33 @@ const App = (props) => {
   console.log(user);
 
   return (
-    <div className={classes.page}>
-      <Typography style={{ color: "white" }} variant="h2">
-        You saved around
-        {` ${fanswer}`} litres
-      </Typography>
+    <div
+      style={{
+        height: "100vh",
+        width: "100%",
+        backgroundImage: `url(${lastnew1})`,
+
+        backgroundSize: "100% 100%",
+      }}
+    >
+      <div
+        style={{
+          height: "250px",
+          width: "250px",
+          borderRadius: "50%",
+          backgroundColor: "green",
+          overflow: "hidden",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      >
+        <Typography style={{ color: "white" }} variant="h4">
+          You saved around
+          {` ${fanswer}`} litres
+        </Typography>
+      </div>
     </div>
   );
 };
