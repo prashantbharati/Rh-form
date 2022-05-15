@@ -52,11 +52,18 @@ const App = (props) => {
           backgroundColor: "green",
           overflow: "hidden",
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
+          position: "absolute",
+          right: "20%",
+          top: "20%",
         }}
       >
+        <Typography style={{ color: "white" }} variant="h4">
+          Hurray!!
+        </Typography>
         <Typography style={{ color: "white" }} variant="h4">
           You saved around
           {` ${fanswer}`} litres
